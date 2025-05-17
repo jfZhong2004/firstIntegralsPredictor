@@ -3,65 +3,65 @@ from sympy.core.function import AppliedUndef
 
 def sympy_to_polish(expr):
     """将SymPy表达式转换为波兰表达式字符串"""
-    # 处理符号
-    if isinstance(expr, sp.Symbol):
-        return expr.name
+    try:
+        # 处理符号
+        if isinstance(expr, sp.Symbol):
+            return expr.name
 
-    # 处理所有数值类型（整数、分数、浮点数）
-    if isinstance(expr, sp.Number):
-        # 如果是负数，视作 0 减去这个数
-        if expr.is_negative:
-            return f"- 0 {abs(expr)}"
-        return str(expr)
+        # 处理所有数值类型（整数、分数、浮点数）
+        if isinstance(expr, sp.Number):
+            # 如果是负数，视作 0 减去这个数
+            if expr.is_negative:
+                return f"- 0 {abs(expr)}"
+            return str(expr)
 
-    # 处理数学常数 e
-    if expr == sp.E:
-        return "e"
+        # 处理数学常数 e
+        if expr == sp.E:
+            return "e"
 
-    # 处理数学常数 pi
-    if expr == sp.pi:
-        return "pi"
+        # 处理数学常数 pi
+        if expr == sp.pi:
+            return "pi"
 
-    # 处理虚数单位 i
-    if expr == sp.I:
-        return "i"
+        # 处理虚数单位 i
+        if expr == sp.I:
+            return "i"
 
-    # 处理加法（包含隐式减法）
-    if isinstance(expr, sp.Add):
-        result = _handle_add(expr)
-        print(f"生成的波兰表达式 (Add): {result}")  # 调试信息
-        return result
-
-    # 处理乘法（包含隐式除法）
-    if isinstance(expr, sp.Mul):
-        result = _handle_mul(expr)
-        print(f"生成的波兰表达式 (Mul): {result}")  # 调试信息
-        return result
-
-    # 处理幂运算（包含sqrt特例）
-    if isinstance(expr, sp.Pow):
-        base, exponent = expr.args
-        if exponent == sp.S.Half:  # 识别平方根
-            result = f"sqrt {sympy_to_polish(base)}"
-            print(f"生成的波兰表达式 (Sqrt): {result}")  # 调试信息
+        # 处理加法（包含隐式减法）
+        if isinstance(expr, sp.Add):
+            result = _handle_add(expr)
             return result
-        result = f"^ {sympy_to_polish(base)} {sympy_to_polish(exponent)}"
-        print(f"生成的波兰表达式 (Pow): {result}")  # 调试信息
-        return result
 
-    # 处理函数调用
-    if isinstance(expr, sp.Function):
-        func_name = expr.func.__name__.lower()
-        args = " ".join(sympy_to_polish(arg) for arg in expr.args)
-        result = f"{func_name} {args}"
-        print(f"生成的波兰表达式 (Function): {result}")  # 调试信息
-        return result
+        # 处理乘法（包含隐式除法）
+        if isinstance(expr, sp.Mul):
+            result = _handle_mul(expr)
+            return result
 
-    # 处理未定义符号
-    if isinstance(expr, AppliedUndef):
-        return str(expr)
+        # 处理幂运算（包含sqrt特例）
+        if isinstance(expr, sp.Pow):
+            base, exponent = expr.args
+            if exponent == sp.S.Half:  # 识别平方根
+                result = f"sqrt {sympy_to_polish(base)}"
+                return result
+            result = f"^ {sympy_to_polish(base)} {sympy_to_polish(exponent)}"
+            return result
 
-    raise ValueError(f"未支持的表达式类型: {type(expr)}")
+        # 处理函数调用
+        if isinstance(expr, sp.Function):
+            func_name = expr.func.__name__.lower()
+            args = " ".join(sympy_to_polish(arg) for arg in expr.args)
+            result = f"{func_name} {args}"
+            return result
+
+        # 处理未定义符号
+        if isinstance(expr, AppliedUndef):
+            return str(expr)
+
+        raise ValueError(f"未支持的表达式类型: {type(expr)}")
+
+    except Exception as e:
+        print(f"错误: {e}")
+        raise e
 
 def _handle_add(expr):
     """处理加法表达式，自动识别隐式减法"""

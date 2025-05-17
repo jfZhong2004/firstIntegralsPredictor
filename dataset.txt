@@ -1,71 +1,30 @@
-(2*x**2 + x*y + 2*x + y)/(t*y - 2*t)
-(-4*x**2 - 4*x*y - y**2)/(t*y - 2*t)
-t*(2*x + y)
-x*(x + y) + y + 1
-/ + + + y * 2 x * 2 ^ x 2 * x y + * - 0 2 t * t y , / - + * - 0 4 ^ x 2 * * - 0 4 x y ^ y 2 + * - 0 2 t * t y ; * t + y * 2 x , + + 1 y * x + x y
-2/(2*x*y + 1)
-2/(2*x**3*y + x**2)
--2*t + x**2*y
-y/2 + (x + 1)/(2*x)
-/ 2 + 1 * * 2 x y , / 2 + ^ x 2 * * 2 y ^ x 3 ; + * - 0 2 t * y ^ x 2 , + * 1/2 y / * 1/2 + 1 x x
-2*x/(x + y)
-2*y/(x + y)
-1 - 1/(x/y + 2)
-2*t - x - y - 1
-/ * 2 x + x y , / * 2 y + x y ; - 1 ^ + 2 / x y - 0 1 , - - + - 0 1 * 2 t x y
--8*x*y/(4*t*y + t + 2*x - 4*y**2 - y) - 2*x/(4*t*y + t + 2*x - 4*y**2 - y)
-2*x/(4*t*y + t + 2*x - 4*y**2 - y)
-x + 2*y**2 + y
-cos(sqrt(x)*(t - y))
-+ / * - 0 2 x - + + + t * - 0 4 ^ y 2 * 2 x * * 4 t y y / * * - 0 8 x y - + + + t * - 0 4 ^ y 2 * 2 x * * 4 t y y , / * 2 x - + + + t * - 0 4 ^ y 2 * 2 x * * 4 t y y ; + + x y * 2 ^ y 2 , cos * sqrt x - t y
-x*y/(-4*t*x + t*y + 8*x**2)
-(4*x*y - y**2)/(-4*t*x + t*y + 8*x**2)
-y*(t - 2*x)/2
-x*(x - y/2)
-/ * x y + + * 8 ^ x 2 * t y * * - 0 4 t x , / - * * 4 x y ^ y 2 + + * 8 ^ x 2 * t y * * - 0 4 t x ; * * 1/2 y + t * - 0 2 x , * x + x * - 0 1/2 y
--2*x/(-t + x**2 - x + y)
-(t - x**2 - x - y)/(-t + x**2 - x + y)
-x + (t + x - y)/x
--t + x - y - 1
-/ * - 0 2 x - - + y ^ x 2 t x , / - - - t x y ^ x 2 - - + y ^ x 2 t x ; + x / - + t x y x , - - + - 0 1 x t y
-(2*x*y - x)/(2*t*y - t + x + 2*y**2 - y)
--x/(2*t*y - t + x + 2*y**2 - y)
-x/(t - x + y)
--2/(x + y**2 - y)
-/ - * * 2 x y x - - + + x * 2 ^ y 2 * * 2 t y t y , / * - 0 1 x - - + + x * 2 ^ y 2 * * 2 t y t y ; / x - + t y x , / - 0 2 - + x ^ y 2 y
--2*t**2*x*exp(y)*sin(2*exp(y))/(2*t**3*exp(y)*sin(2*exp(y)) + t**2*x - 2*t**2*y*exp(y)*sin(2*exp(y)) - 4*t*exp(y)*sin(2*exp(y))) - 4*x*exp(y)*sin(2*exp(y))/(2*t**3*exp(y)*sin(2*exp(y)) + t**2*x - 2*t**2*y*exp(y)*sin(2*exp(y)) - 4*t*exp(y)*sin(2*exp(y)))
-t**2*x/(2*t**3*exp(y)*sin(2*exp(y)) + t**2*x - 2*t**2*y*exp(y)*sin(2*exp(y)) - 4*t*exp(y)*sin(2*exp(y))) + 2*x/(2*t**3*exp(y)*sin(2*exp(y)) + t**2*x - 2*t**2*y*exp(y)*sin(2*exp(y)) - 4*t*exp(y)*sin(2*exp(y)))
-x*(t - y - 2/t)
--x + cos(2*exp(y))
-+ / * * * - 0 4 x exp y sin * 2 exp y + + + * x ^ t 2 * * * - 0 4 t exp y sin * 2 exp y * * * 2 ^ t 3 exp y sin * 2 exp y * * * * - 0 2 y ^ t 2 exp y sin * 2 exp y / * * * * - 0 2 x ^ t 2 exp y sin * 2 exp y + + + * x ^ t 2 * * * - 0 4 t exp y sin * 2 exp y * * * 2 ^ t 3 exp y sin * 2 exp y * * * * - 0 2 y ^ t 2 exp y sin * 2 exp y , + / * 2 x + + + * x ^ t 2 * * * - 0 4 t exp y sin * 2 exp y * * * 2 ^ t 3 exp y sin * 2 exp y * * * * - 0 2 y ^ t 2 exp y sin * 2 exp y / * x ^ t 2 + + + * x ^ t 2 * * * - 0 4 t exp y sin * 2 exp y * * * 2 ^ t 3 exp y sin * 2 exp y * * * * - 0 2 y ^ t 2 exp y sin * 2 exp y ; * x - + t / - 0 2 t y , - cos * 2 exp y x
--x/(4*x*y + y)
--1/(4*x + 1)
--t - 2*x*y - y
--(x + y)/y
-/ * - 0 1 x + y * * 4 x y , / - 0 1 + 1 * 4 x ; - - * * - 0 2 x y t y , / * - 0 1 + x y y
-(-2*x**2 - 4*x)/(3*t*x + 4*t + 2*x*y + 4*y)
-x*y/(3*t*x + 4*t + 2*x*y + 4*y)
-y**2*(-x - 2)
-x*(t + y)/y
-/ + * - 0 4 x * - 0 2 ^ x 2 + + + * 4 t * 4 y * * 2 x y * * 3 t x , / * x y + + + * 4 t * 4 y * * 2 x y * * 3 t x ; * ^ y 2 - - 0 2 x , / * x + t y y
--x**2/(t*x + y*exp(y))
--x*y/(t*x + y*exp(y))
-x/y
-t*(x + exp(y)/t)
-/ * - 0 1 ^ x 2 + * t x * y exp y , / * * - 0 1 x y + * t x * y exp y ; / x y , * t + x / exp y t
-x*sin(y)/(x*sin(y) - cos(y)**2)
-cos(y)/(x*sin(y) - cos(y)**2)
--2*t + 2*x - 2*sin(y)
-x*cos(y)
-/ * x sin y - * x sin y ^ cos y 2 , / cos y - * x sin y ^ cos y 2 ; + + * - 0 2 t * - 0 2 sin y * 2 x , * x cos y
--x*y*log(x)/(t*x*log(x) + t*y)
-x*y*log(x)/(t*x*log(x) + t*y)
-x + y + pi
-tan(t*log(x)/y)
-/ * * * - 0 1 x y log x + * t y * * t x log x , / * * x y log x + * t y * * t x log x ; + + pi x y , tan / * t log x y
-2*x/(2*x + 4*y*sqrt(x + y) + 2*y) + 4*y*sqrt(x + y)/(2*x + 4*y*sqrt(x + y) + 2*y) + 3*y/(2*x + 4*y*sqrt(x + y) + 2*y)
--y*sqrt(x + y)/(4*x*y + 2*x*sqrt(x + y) + 4*y**2 + 2*y*sqrt(x + y))
-t - x - y - 4
-y*(y + sqrt(x + y))
-+ + / * 2 x + + * 2 x * 2 y * * 4 y sqrt + x y / * 3 y + + * 2 x * 2 y * * 4 y sqrt + x y / * * 4 y sqrt + x y + + * 2 x * 2 y * * 4 y sqrt + x y , / * * - 0 1 y sqrt + x y + + + * 4 ^ y 2 * * 2 x sqrt + x y * * 2 y sqrt + x y * * 4 x y ; - - + - 0 4 t x y , * y + y sqrt + x y
-
+- / cos x + * t sqrt - * 2 y ^ y 2 * t sin x y , - / * sqrt - * 2 y ^ y 2 cos x + * t sqrt - * 2 y ^ y 2 * t sin x y ; - * t cos x t , + + - 0 2 x acos + - 0 1 y
+- - + + + / x - * * t x ^ tan y 2 t / ^ x 2 - * * t x ^ tan y 2 t / * x ^ tan y 2 - * * t x ^ tan y 2 t / * ^ x 2 ^ tan y 2 - * * t x ^ tan y 2 t x x , - - + + ^ - * * t x ^ tan y 2 t - 0 1 / ^ x 2 - * * t x ^ tan y 2 t / * 2 x - * * t x ^ tan y 2 t y x ; - - tan y x log x , / - + + - 0 1 t y x t
+- / ^ x 2 - - + + - 0 1 * ^ x 2 log x log x ^ x 2 x ^ x 2 , / * x y - - + + - 0 1 * ^ x 2 log x log x ^ x 2 x ; - + + t x y ^ x - 0 1 , - + - 0 2 * y log x y
+- + / * cos y cos + t x - - - - - * x cos + t x cos y sin + t x y cos y y / * * y cos + t x sin y - - - - - * x cos + t x cos y sin + t x y cos y y x , / * * - 0 1 y cos + t x - - - - - * x cos + t x cos y sin + t x y cos y y ; / - cos y x y , / + x sin + t x y
++ / * - 0 2 x - - * x sin log x x y / * * 2 x sin log x - - * x sin log x x y , / * * - 0 2 y cos log x - - * x sin log x x y ; - y y , + + + 1 x y * - 0 2 t
++ / * * 2 y ^ x 2 - + + * 2 x * 4 ^ x 2 * * - 0 4 x sqrt * x y sqrt * x y / * * * - 0 3 x y sqrt * x y - + + * 2 x * 4 ^ x 2 * * - 0 4 x sqrt * x y sqrt * x y , + / * ^ y 2 sqrt * x y - + + * 2 x * 4 ^ x 2 * * - 0 4 x sqrt * x y sqrt * x y / * * - 0 2 x ^ y 2 - + + * 2 x * 4 ^ x 2 * * - 0 4 x sqrt * x y sqrt * x y ; log - t ^ y - 0 1 , * y - x sqrt * x y
+/ + - 0 4 * - 0 2 x - + 4 * 2 x y , / y - + 4 * 2 x y ; * ^ y 2 + 2 x , - - - 0 t x y
+/ + + * - 0 2 ^ x 2 * 2 x * * 2 x y - * t x t , / + + * 2 y * 2 ^ y 2 * * - 0 2 x y - * t x t ; * ^ t 2 - + - 0 1 x y , / * - 0 1 x y
+- - + / * - 0 2 ^ x 2 + + + * t y * * 3 t x * * t y ^ tan y 2 * * * 4 t x ^ tan y 2 / * * - 0 2 ^ x 2 ^ tan y 2 + + + * t y * * 3 t x * * t y ^ tan y 2 * * * 4 t x ^ tan y 2 x x , + / * 2 ^ x 2 + + + * t y * * 3 t x * * t y ^ tan y 2 * * * 4 t x ^ tan y 2 / * x y + + + * t y * * 3 t x * * t y ^ tan y 2 * * * 4 t x ^ tan y 2 ; * * t x + y * 2 x , - - 0 x tan y
+/ * - 0 1 x + + + + 1 x ^ y 2 * ^ y 2 atan y atan y , + + + ^ + + + + 1 x ^ y 2 * ^ y 2 atan y atan y - 0 1 / ^ y 2 + + + + 1 x ^ y 2 * ^ y 2 atan y atan y / atan y + + + + 1 x ^ y 2 * ^ y 2 atan y atan y / * ^ y 2 atan y + + + + 1 x ^ y 2 * ^ y 2 atan y atan y ; * x - - 0 1 atan y , - - + 4 y t x
+- - + / * * * - 0 2 t cos / t y sin + t y - + * * 2 t cos / t y * * t x cos / t y ^ y 2 / * * * - 0 2 y cos / t y sin + t y - + * * 2 t cos / t y * * t x cos / t y ^ y 2 t x , + + / * * 2 y cos / t y - + * * 2 t cos / t y * * t x cos / t y ^ y 2 / * * x y cos / t y - + * * 2 t cos / t y * * t x cos / t y ^ y 2 / * * ^ y 2 sin / t y sin + t y - + * * 2 t cos / t y * * t x cos / t y ^ y 2 ; + * - 0 2 x * 2 cos + t y , / - - 0 2 x sin / t y
+/ * x sqrt - - + 1 * * 2 x y ^ x 2 ^ y 2 - x y , / * y sqrt - - + 1 * * 2 x y ^ x 2 ^ y 2 - x y ; - - 0 t acos - x y , sin / y x
+- + + - 0 1 * * * 1/2 y ^ x 2 exp t * * * * 1/2 t x y exp t x , + + / y x * ^ y 2 exp t * * * - 0 1/2 t ^ y 2 exp t ; + / / 2 x y exp t , / * x y + + - 0 2 t x
++ / * * 2 x y - + + + * x y * * 2 t tan y * * x y ^ tan y 2 tan y x / * * * 2 x y ^ tan y 2 - + + + * x y * * 2 t tan y * * x y ^ tan y 2 tan y x , / * * 2 y tan y - + + + * x y * * 2 t tan y * * x y ^ tan y 2 tan y x ; / * * - 0 1 x tan 2 tan y , / - + 1 * 2 t x y
+/ * * x y atan 2 - + * - 0 2 cos x * * t x cos x t , / * * x y cos x - + * - 0 2 cos x * * t x cos x t ; / y - + 2 y t , - * y atan 2 sin x
+/ * * * - 0 1 ^ x 2 cos * t x sin y - * * * t x cos * t x sin y y , / * * * * - 0 1 x y cos * t x sin y - * * * t x cos * t x sin y y ; exp * - 0 1 sin / y x , / sin * t x sin y
+/ - - 0 x y - + + + + * - 0 2 ^ x 2 * 2 x * t y * * - 0 2 t x * * 2 t ^ x 2 y , / + + * x ^ y 2 * * - 0 2 y ^ x 2 * * 2 x y - + + + + * - 0 2 ^ x 2 * 2 x * t y * * - 0 2 t x * * 2 t ^ x 2 y ; log * y - * t x x , - y x
+- - / x - + + + * t x * t log y * * t x log 2 * * t x log / / - 0 1 t x t ^ x 2 x , / * * - 0 1 x y - + + + * t x * t log y * * t x log 2 * * t x log / / - 0 1 t x t ; / + x log y y , / y log / / - 0 2 t x
++ / * * - 0 2 x atan x + + + + + + + * * - 0 4 x ^ t 2 * * - 0 2 t atan x * * 2 t x * * 4 ^ t 2 atan x * * t x y * * * - 0 2 t ^ x 2 atan x * * * - 0 2 x y ^ t 2 * * * 4 ^ t 2 ^ x 2 atan x / * * - 0 2 ^ x 3 atan x + + + + + + + * * - 0 4 x ^ t 2 * * - 0 2 t atan x * * 2 t x * * 4 ^ t 2 atan x * * t x y * * * - 0 2 t ^ x 2 atan x * * * - 0 2 x y ^ t 2 * * * 4 ^ t 2 ^ x 2 atan x , - / * * - 0 2 x y + + + + + + + * * - 0 4 x ^ t 2 * * - 0 2 t atan x * * 2 t x * * 4 ^ t 2 atan x * * t x y * * * - 0 2 t ^ x 2 atan x * * * - 0 2 x y ^ t 2 * * * 4 ^ t 2 ^ x 2 atan x x ; / * - - 0 2 y atan x y , / y + * - 0 2 x / x t
+- + / * * - 0 4 sqrt - 1 ^ y 2 asin / y + - 0 2 x + + * t y * * * - 0 2 t ^ y 2 sin x * * * t x ^ y 2 sin x / * * * 4 x sqrt - 1 ^ y 2 asin / y + - 0 2 x + + * t y * * * - 0 2 t ^ y 2 sin x * * * t x ^ y 2 sin x ^ x 2 , + + / * * * * 4 y sqrt - 1 ^ y 2 asin / y + - 0 2 x sin x + + t * * * - 0 2 t y sin x * * * t x y sin x / * * * * y ^ x 2 sqrt - 1 ^ y 2 asin / y + - 0 2 x sin x + + t * * * - 0 2 t y sin x * * * t x y sin x / * * * * * - 0 4 x y sqrt - 1 ^ y 2 asin / y + - 0 2 x sin x + + t * * * - 0 2 t y sin x * * * t x y sin x ; + ^ y - 0 1 cos x , / asin / y + - 0 2 x t
+- - - / * * x y log y - - + + + + + + + ^ y 2 * t x * t y * x y * * 3 x ^ y 2 * * t x log y * * * 2 t x y * * * 2 x y log y ^ y 2 t ^ x 2 x y , - - 0 x x ; * * x y - - 0 t y , / + y log y + x y
+/ * * * - 0 1 y sqrt - 1 ^ x 2 asin x - + + ^ y 2 * t y * * * - 0 2 y sqrt - 1 ^ x 2 asin x t , / * * y sqrt - 1 ^ x 2 asin x - + + ^ y 2 * t y * * * - 0 2 y sqrt - 1 ^ x 2 asin x t ; + + 4 x y , * * y + t y asin x
++ / * - 0 2 ^ y 2 - + * - 0 2 y * x y x / * x ^ y 2 - + * - 0 2 y * x y x , / * * ^ y 2 sqrt - 1 ^ y 2 asin y - + * - 0 2 y * x y x ; + 1 / asin y + - 0 2 x , - t x
+/ * * * - 0 3 x sqrt - 1 ^ y 2 acos y + + + * t y * x y * * * 3 t sqrt - 1 ^ y 2 acos y * * * 6 x sqrt - 1 ^ y 2 acos y , / * * * - 0 1 y sqrt - 1 ^ y 2 acos y + + + * t y * x y * * * 3 t sqrt - 1 ^ y 2 acos y * * * 6 x sqrt - 1 ^ y 2 acos y ; acos * x ^ y - 0 3 , / / acos y x + t x
+/ * * 2 x y + + 1 * * - 0 2 t y * * 2 t x , / * * - 0 2 x y + + 1 * * - 0 2 t y * * 2 t x ; + y * * * 2 t x y , + - 0 2 sqrt log + x y
+- - - 0 ^ x 2 t t , - - - / * * - 0 2 x y + * t x * * t y tan t t ^ y 2 t ; / * * * - 0 1 t y asin 2 x , * t + x * y tan t
+/ - * * - 0 4 ^ x 2 sqrt - - + 1 * * 2 t y ^ t 2 ^ y 2 sqrt - - + 1 * * 2 t y ^ t 2 ^ y 2 + + 2 * 3 sqrt - - + 1 * * 2 t y ^ t 2 ^ y 2 * * 4 ^ x 2 sqrt - - + 1 * * 2 t y ^ t 2 ^ y 2 , / + + 2 sqrt - - + 1 * * 2 t y ^ t 2 ^ y 2 * * 4 ^ x 2 sqrt - - + 1 * * 2 t y ^ t 2 ^ y 2 + + 2 * 3 sqrt - - + 1 * * 2 t y ^ t 2 ^ y 2 * * 4 ^ x 2 sqrt - - + 1 * * 2 t y ^ t 2 ^ y 2 ; - - y t atan * 2 x , - + x y asin - t y
+- - + / * x y + + + * t y * * 2 t x * * t y ^ tan y 2 * * * 2 t x ^ tan x 2 / * * x y ^ tan y 2 + + + * t y * * 2 t x * * t y ^ tan y 2 * * * 2 t x ^ tan x 2 ^ x 2 ^ x 2 , - - + / * x y + + + * t y * * 2 t x * * t y ^ tan y 2 * * * 2 t x ^ tan x 2 / * * x y ^ tan x 2 + + + * t y * * 2 t x * * t y ^ tan y 2 * * * 2 t x ^ tan x 2 ^ x 2 ^ x 2 ; * - 0 1 asin - tan x tan y , - / * t ^ y - 0 2 x t
+- - + / * x y - + + - 0 1 ^ x 2 * * x y sqrt - 1 ^ x 2 x / * ^ x 3 ^ y 2 - + + - 0 1 ^ x 2 * * x y sqrt - 1 ^ x 2 x x y , - / * ^ x 2 ^ y 2 - + + - 0 1 ^ x 2 * * x y sqrt - 1 ^ x 2 x ^ y 2 ; + + t ^ y - 0 1 acos x , sqrt - y log * x y
+/ x - + t * x y y , / * x y - + t * x y y ; + 2 sin / - t y x , / * y exp * - 0 1 x sin 2

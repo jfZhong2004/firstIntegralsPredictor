@@ -2,98 +2,115 @@ import sympy as sp
 
 def polish_to_sympy(expr):
     """将波兰表达式字符串转换为 SymPy 表达式"""
-    print(f"解析波兰表达式: {expr}")  # 调试信息
-    tokens = expr.split()
-    stack = []
+    try:
+        #print(f"解析波兰表达式: {expr}")  # 调试信息
+        tokens = expr.split()
+        stack = []
 
-    while tokens:
-        token = tokens.pop()
-        print(f"当前 token: {token}, 当前栈: {stack}, 栈元素类型: {[type(item) for item in stack]}")  # 调试信息
-        try:
-            if token in {"+", "-", "*", "/", "^"}:
-                # 操作符处理
-                if len(stack) < 2:
-                    raise ValueError("波兰表达式无效: 操作数不足")
-                b = stack.pop()
-                a = stack.pop()
-                # 统一处理所有类型的操作数
-                try:
-                    if token == "*":
-                        stack.append(sp.Mul(b, a))
-                    elif token == "+":
-                        stack.append(sp.Add(b, a))
-                    elif token == "-":
-                        stack.append(sp.Add(b, -a))
-                    elif token == "/":
-                        stack.append(sp.Mul(b, sp.Pow(a, -1)))
-                    elif token == "^":
-                        stack.append(sp.Pow(b, a))
-                except Exception as e:
-                    raise TypeError(f"不支持的操作数类型: {type(b)} 和 {type(a)}，错误: {e}")
-            elif token == "sqrt":
-                # 特殊函数 sqrt
-                if not stack:
-                    raise ValueError("波兰表达式无效: 操作数不足")
-                a = stack.pop()
-                stack.append(sp.sqrt(a))
-            elif token == "log":
-                # 特殊函数 log
-                if not stack:
-                    raise ValueError("波兰表达式无效: 操作数不足")
-                a = stack.pop()
-                stack.append(sp.log(a))
-            elif token == "sin":
-                # 特殊函数 sin
-                if not stack:
-                    raise ValueError("波兰表达式无效: 操作数不足")
-                a = stack.pop()
-                stack.append(sp.sin(a))
-            elif token == "cos":
-                # 特殊函数 cos
-                if not stack:
-                    raise ValueError("波兰表达式无效: 操作数不足")
-                a = stack.pop()
-                stack.append(sp.cos(a))
-            elif token == "tan":
-                # 特殊函数 tan
-                if not stack:
-                    raise ValueError("波兰表达式无效: 操作数不足")
-                a = stack.pop()
-                stack.append(sp.tan(a))
-            elif token == "exp":
-                # 特殊函数 exp
-                if not stack:
-                    raise ValueError("波兰表达式无效: 操作数不足")
-                a = stack.pop()
-                stack.append(sp.exp(a))
-            elif token == "atan":
-                # 特殊函数 atan
-                if not stack:
-                    raise ValueError("波兰表达式无效: 操作数不足")
-                a = stack.pop()
-                stack.append(sp.atan(a))
-            elif token == "pi":
-                # 常量 pi
-                stack.append(sp.pi)
-            elif token == "e":
-                # 常量 e
-                stack.append(sp.E)
-            elif token == "i":
-                # 虚数单位 i
-                stack.append(sp.I)
-            else:
-                # 处理数字和符号
-                try:
-                    stack.append(sp.sympify(token))
-                except sp.SympifyError:
-                    stack.append(sp.Symbol(token))
-        except IndexError:
-            raise ValueError("波兰表达式无效: 栈操作失败")
+        while tokens:
+            token = tokens.pop()
+            #print(f"当前 token: {token}, 当前栈: {stack}, 栈元素类型: {[type(item) for item in stack]}")  # 调试信息
+            try:
+                if token in {"+", "-", "*", "/", "^"}:
+                    # 操作符处理
+                    if len(stack) < 2:
+                        raise ValueError("波兰表达式无效: 操作数不足")
+                    b = stack.pop()
+                    a = stack.pop()
+                    # 统一处理所有类型的操作数
+                    try:
+                        if token == "*":
+                            stack.append(sp.Mul(b, a))
+                        elif token == "+":
+                            stack.append(sp.Add(b, a))
+                        elif token == "-":
+                            stack.append(sp.Add(b, -a))
+                        elif token == "/":
+                            stack.append(sp.Mul(b, sp.Pow(a, -1)))
+                        elif token == "^":
+                            stack.append(sp.Pow(b, a))
+                    except Exception as e:
+                        raise TypeError(f"不支持的操作数类型: {type(b)} 和 {type(a)}，错误: {e}")
+                elif token == "sqrt":
+                    # 特殊函数 sqrt
+                    if not stack:
+                        raise ValueError("波兰表达式无效: 操作数不足")
+                    a = stack.pop()
+                    stack.append(sp.sqrt(a))
+                elif token == "log":
+                    # 特殊函数 log
+                    if not stack:
+                        raise ValueError("波兰表达式无效: 操作数不足")
+                    a = stack.pop()
+                    stack.append(sp.log(a))
+                elif token == "sin":
+                    # 特殊函数 sin
+                    if not stack:
+                        raise ValueError("波兰表达式无效: 操作数不足")
+                    a = stack.pop()
+                    stack.append(sp.sin(a))
+                elif token == "cos":
+                    # 特殊函数 cos
+                    if not stack:
+                        raise ValueError("波兰表达式无效: 操作数不足")
+                    a = stack.pop()
+                    stack.append(sp.cos(a))
+                elif token == "tan":
+                    # 特殊函数 tan
+                    if not stack:
+                        raise ValueError("波兰表达式无效: 操作数不足")
+                    a = stack.pop()
+                    stack.append(sp.tan(a))
+                elif token == "exp":
+                    # 特殊函数 exp
+                    if not stack:
+                        raise ValueError("波兰表达式无效: 操作数不足")
+                    a = stack.pop()
+                    stack.append(sp.exp(a))
+                elif token == "atan":
+                    # 特殊函数 atan
+                    if not stack:
+                        raise ValueError("波兰表达式无效: 操作数不足")
+                    a = stack.pop()
+                    stack.append(sp.atan(a))
+                elif token == "asin":
+                    # 特殊函数 asin
+                    if not stack:
+                        raise ValueError("波兰表达式无效: 操作数不足")
+                    a = stack.pop()
+                    stack.append(sp.asin(a))
+                elif token == "acos":
+                    # 特殊函数 acos
+                    if not stack:
+                        raise ValueError("波兰表达式无效: 操作数不足")
+                    a = stack.pop()
+                    stack.append(sp.acos(a))
+                elif token == "pi":
+                    # 常量 pi
+                    stack.append(sp.pi)
+                elif token == "e":
+                    # 常量 e
+                    stack.append(sp.E)
+                elif token == "i":
+                    # 虚数单位 i
+                    stack.append(sp.I)
+                else:
+                    # 处理数字和符号
+                    try:
+                        stack.append(sp.sympify(token))
+                    except sp.SympifyError:
+                        stack.append(sp.Symbol(token))
+            except IndexError:
+                raise ValueError("波兰表达式无效: 栈操作失败")
 
-    print(f"最终栈: {stack}")  # 调试信息
-    if len(stack) != 1:
-        raise ValueError("波兰表达式无效: 栈中剩余多余元素")
-    return stack[0]
+        #print(f"最终栈: {stack}")  # 调试信息
+        if len(stack) != 1:
+            raise ValueError("波兰表达式无效: 栈中剩余多余元素")
+        return stack[0]
+
+    except Exception as e:
+        print(f"错误: {e}")
+        raise e
 
 # 测试用例
 if __name__ == "__main__":

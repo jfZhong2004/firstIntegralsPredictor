@@ -78,6 +78,7 @@ def main():
         except Exception as e:
             continue
 
+
         # 步骤3：验证解的正确性
         substituted_f = df_dx * dxdt_expr + df_dy * dydt_expr + df_dt
         substituted_g = dg_dx * dxdt_expr + dg_dy * dydt_expr + dg_dt
@@ -90,31 +91,33 @@ def main():
         valid_g = simplified_g == 0
 
         if valid_f and valid_g:
+            
             dxdt_polish = sympy_to_polish(dxdt_expr)
             dydt_polish = sympy_to_polish(dydt_expr)
             f_polish = sympy_to_polish(f)
             g_polish = sympy_to_polish(g)
 
             # 验证波兰表达式是否能正确还原
-            
+            '''
             try:
-                if simplify(polish_to_sympy(dxdt_polish)) != simplify(dxdt_expr) or \
-                   simplify(polish_to_sympy(dydt_polish)) != simplify(dydt_expr) or \
-                   simplify(polish_to_sympy(f_polish)) != simplify(f) or \
-                   simplify(polish_to_sympy(g_polish)) != simplify(g):
+                if polish_to_sympy(dxdt_polish) != dxdt_expr or \
+                   polish_to_sympy(dydt_polish) != dydt_expr or \
+                   polish_to_sympy(f_polish) != f0 or \
+                   polish_to_sympy(g_polish) != g0:
                     continue
             except Exception as e:
                 print(f"波兰表达式还原失败: {e}")
                 continue
-               
+            '''   
             trainingData = f"{dxdt_polish} , {dydt_polish} ; {f_polish} , {g_polish}"
-            
+            '''
             # 添加调试信息
             print(f"验证结果: valid_f={valid_f}, valid_g={valid_g}")
             print(f"dxdt_expr: {dxdt_expr}, dydt_expr: {dydt_expr}")
             print(f"dxdt_polish: {dxdt_polish}, dydt_polish: {dydt_polish}")
             print(f"f_polish: {f_polish}, g_polish: {g_polish}")
             print(f"trainingData: {trainingData}, 长度: {len(trainingData)}")
+            '''
 
             # 检查长度阈值
             if len(trainingData) > length_threshold:
@@ -122,16 +125,16 @@ def main():
 
             # 写入数据集文件
             with open('dataset.txt', 'a') as f:
-                f.write(str(dxdt_expr) + '\n')
-                f.write(str(dydt_expr) + '\n')
-                f.write(str(f0) + '\n')
-                f.write(str(g0) + '\n')
+                #f.write(str(dxdt_expr) + '\n')
+                #f.write(str(dydt_expr) + '\n')
+                #f.write(str(f0) + '\n')
+                #f.write(str(g0) + '\n')
                 f.write(trainingData + '\n')
 
             generated_count += 1
 
             # 每生成10个输出提示语
-            if generated_count % 5 == 0:
+            if generated_count % 10 == 0:
                 print(f"已生成 {generated_count} 个微分方程组-首次积分对")
 
     print(f"目标生成数量 {target_count} 已完成")
