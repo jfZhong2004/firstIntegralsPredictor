@@ -68,8 +68,4 @@ tan(t*log(x)/y)
 t - x - y - 4
 y*(y + sqrt(x + y))
 + + / * 2 x + + * 2 x * 2 y * * 4 y sqrt + x y / * 3 y + + * 2 x * 2 y * * 4 y sqrt + x y / * * 4 y sqrt + x y + + * 2 x * 2 y * * 4 y sqrt + x y , / * * - 0 1 y sqrt + x y + + + * 4 ^ y 2 * * 2 x sqrt + x y * * 2 y sqrt + x y * * 4 x y ; - - + - 0 4 t x y , * y + y sqrt + x y
-x*cos(y)/(2*x*cos(y) + sin(y))
-sin(y)/(2*x*cos(y) + sin(y))
--t + 2*x + y
-x*cos(2)/sin(y)
-/ * x cos y + * * 2 x cos y sin y , / sin y + * * 2 x cos y sin y ; - + y * 2 x t , / * x cos 2 sin y
+
