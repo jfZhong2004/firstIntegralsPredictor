@@ -129,6 +129,7 @@ class MathExpressionDataset(Dataset):
 
 def train(args):
     device = torch.device('cuda' if torch.cuda.is_available() and not args.cpu else 'cpu')
+    print(f"Using device: {device}")  # 添加此行以打印设备信息
     
     dataset = MathExpressionDataset(args.data_path, max_length=args.max_len)
     model = TransformerModel(

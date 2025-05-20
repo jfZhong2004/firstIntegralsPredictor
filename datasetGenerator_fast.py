@@ -20,10 +20,9 @@ def sub(a, b):
 def div(a, b):
     return Mul(a, Pow(b, -1))
 
-def worker_process(process_id, generator_config, target_count, length_threshold):
+def worker_process(process_id, generator_config, target_count, length_threshold, file_lock, output_file):
     """每个进程的工作函数"""
     generated_count = 0
-
 
     while generated_count < target_count:
         try:
@@ -54,7 +53,7 @@ def worker_process(process_id, generator_config, target_count, length_threshold)
 
             # 检查解中是否包含自引用
             if dxdt in dxdt_expr.free_symbols or dydt in dxdt_expr.free_symbols or \
-               dxdt in dydt_expr.free_symbols or dydt in dydt_expr.free_symbols:
+               dxdt in dydt_expr.free_symbols or dydt in dxdt_expr.free_symbols:
                 continue
 
             # 检查退化条件
@@ -87,9 +86,10 @@ def worker_process(process_id, generator_config, target_count, length_threshold)
                 if len(trainingData) > length_threshold:
                     continue
 
-                # 写入数据集文件
-                with open(f'dataset_{process_id}.txt', 'a') as f:
-                    f.write(trainingData + '\n')
+                # 使用文件锁写入数据集文件
+                with file_lock:
+                    with open(output_file, 'a') as f:
+                        f.write(trainingData + '\n')
 
                 generated_count += 1
 
@@ -115,14 +115,16 @@ def main():
         'var_prob': 0.7  # 选择变量的概率
     }
 
-    target_count = 30  # 每个进程的目标生成数量
+    target_count = 50000  # 每个进程的目标生成数量
     length_threshold = 800  # trainingData长度阈值
     num_processes = multiprocessing.cpu_count()  # 使用 CPU 核心数
+    output_file = 'dataset.txt'  # 所有进程写入的同一个文件
+    file_lock = multiprocessing.Lock()  # 文件锁
 
     # 启动多个进程
     processes = []
     for i in range(num_processes):
-        p = multiprocessing.Process(target=worker_process, args=(i, generator_config, target_count, length_threshold))
+        p = multiprocessing.Process(target=worker_process, args=(i, generator_config, target_count, length_threshold, file_lock, output_file))
         processes.append(p)
         p.start()
 
